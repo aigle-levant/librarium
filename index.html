@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="light-mode">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container">
-            <div class="pop-up add-book">
+            <div class="pop-up add-book hide">
                 <form class="form add-book">
                     <h3 class="text sub-heading">Book details</h3>
                     <input class="input" type="name" name="book-name" placeholder="Name of the book" maxlength="100" minlength="1" required>
@@ -30,13 +30,13 @@
                     <button class="btn form-submit" type="submit">Submit</button>
                 </form>
             </div>
-            <nav class="navbar">
+            <header class="header">
                 <h1 class="text title">Librarium</h1>
                 <div class="nav-btn-container">
                     <button class="btn sign-in">Sign in</button>
                     <img src="" class="img btn-img">
                 </div>
-            </nav>
+            </header>
             <main class="main">
                 <div class="books-place">
                     <div class="sample-book animated">

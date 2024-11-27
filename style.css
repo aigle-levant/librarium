@@ -1,1 +1,102 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --anti-white: #E9EFEC;
+  --ash-gray: #C4DAD2;
+  --cam-blue: #6A9C89;
+  --brun-green: #16423C;
+  --night: #0A100D;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.light-mode {
+  background-color: var(--anti-white);
+  color: var(--night);
+}
+body.light-mode .btn {
+  background-color: var(--brun-green);
+  color: var(--anti-white);
+}
+body.light-mode .navbar {
+  background-color: var(--cam-blue);
+  color: var(--night);
+}
+body.light-mode .footer {
+  background-color: var(--brun-green);
+  color: var(--anti-white);
+}
+body.dark-mode {
+  background-color: var(--night);
+  color: var(--anti-white);
+}
+body.dark-mode .btn {
+  background-color: var(--ash-gray);
+  color: var(--night);
+}
+body.dark-mode .navbar {
+  background-color: var(--cam-blue);
+  color: var(--night);
+}
+body.dark-mode .footer {
+  background-color: var(--night);
+  color: var(--ash-gray);
+}
+
+.text {
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+}
+.text.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.text.heading {
+  font-size: 24px;
+}
+.text.sub-heading {
+  font-weight: 500;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.form * {
+  padding: 5px;
+  margin: 10px;
+}
+.form .is-read {
+  display: flex;
+  flex-direction: row;
+}
+.form .is-read .book-read-check {
+  padding: 10px;
+}
+
+.header {
+  width: 100%;
+  height: 60%;
+  position: fixed;
+  top: 0;
+}
+.header .title {
+  display: flex;
+  position: absolute;
+  left: 45%;
+  margin-right: -60px;
+  top: 20px;
+}/*# sourceMappingURL=style.css.map */

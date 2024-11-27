@@ -1,0 +1,130 @@
+//variables
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+$size: 16px;
+
+:root
+{
+    --anti-white: #E9EFEC;
+    --ash-gray: #C4DAD2;
+    --cam-blue: #6A9C89;
+    --brun-green: #16423C;
+    --night: #0A100D;
+
+}
+
+//mixin for mode switch
+@mixin mode ($bgcolor, $color)
+{
+    background-color: $bgcolor;
+    color: $color;
+}
+
+//light and dark mode setting
+body
+{
+    &.light-mode
+    {
+        @include mode(var(--anti-white), var(--night));
+        .btn
+        {
+            @include mode(var(--brun-green), var(--anti-white));
+        }
+        .navbar
+        {
+            @include mode(var(--cam-blue), var(--night));
+        }
+        .footer
+        {
+            @include mode(var(--brun-green), var(--anti-white));
+        }
+    }
+    &.dark-mode
+    {
+        @include mode(var(--night), var(--anti-white));
+        .btn
+        {
+            @include mode(var(--ash-gray), var(--night));
+        }
+        .navbar
+        {
+            @include mode(var(--cam-blue), var(--night));
+        }
+        .footer
+        {
+            @include mode(var(--night), var(--ash-gray));
+        }
+    }
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+//text
+.text
+{
+    font-size: $size;
+    font-family: 'Noto Sans', sans-serif;
+    &.title
+    {
+        font-size: ($size*2);
+        font-weight: 600;
+    }
+    &.heading
+    {
+        font-size: 24px;
+    }
+    &.sub-heading
+    {
+        font-weight: 500;
+    }
+}
+
+//hide and show classes
+.hide
+{
+    display: none;
+}
+.show
+{
+    display: inline-block;
+}
+
+//form
+.form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $size;
+    *
+    {
+        padding: 5px;
+        margin: 10px;
+    }
+    .is-read
+    {
+        display: flex;
+        flex-direction: row;
+        .book-read-check
+        {
+            padding: 10px;
+        }
+    }
+}
+
+.header
+{
+    width: 100%;
+    height: 60%;
+    position: fixed;
+    top: 0;
+    .title
+    {
+        display: flex;
+        position: absolute;
+        left:45%;
+        margin-right: -60px;
+        top: 20px;
+    }
+}
