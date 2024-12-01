@@ -20,12 +20,23 @@ body.light-mode .btn {
   background-color: var(--brun-green);
   color: var(--anti-white);
 }
-body.light-mode .navbar {
+body.light-mode .header {
+  background-color: var(--anti-white);
+  color: var(--night);
+}
+body.light-mode .content {
   background-color: var(--cam-blue);
+  color: var(--night);
+}
+body.light-mode .content .sample-book {
+  background-color: var(--anti-white);
   color: var(--night);
 }
 body.light-mode .footer {
   background-color: var(--brun-green);
+  color: var(--anti-white);
+}
+body.light-mode a {
   color: var(--anti-white);
 }
 body.dark-mode {
@@ -33,21 +44,33 @@ body.dark-mode {
   color: var(--anti-white);
 }
 body.dark-mode .btn {
-  background-color: var(--ash-gray);
-  color: var(--night);
+  background-color: var(--brun-green);
+  color: var(--anti-white);
 }
-body.dark-mode .navbar {
-  background-color: var(--cam-blue);
-  color: var(--night);
+body.dark-mode .header {
+  background-color: var(--night);
+  color: var(--anti-white);
+}
+body.dark-mode .content {
+  background-color: var(--brun-green);
+  color: var(--anti-white);
+}
+body.dark-mode .content .sample-book {
+  background-color: var(--night);
+  color: var(--anti-white);
 }
 body.dark-mode .footer {
   background-color: var(--night);
   color: var(--ash-gray);
 }
+body.dark-mode a {
+  color: var(--anti-white);
+}
 
 .text {
   font-size: 16px;
   font-family: "Noto Sans", sans-serif;
+  overflow-wrap: break-word;
 }
 .text.title {
   font-size: 32px;
@@ -57,7 +80,17 @@ body.dark-mode .footer {
   font-size: 24px;
 }
 .text.sub-heading {
+  font-size: 20px;
   font-weight: 500;
+}
+
+a, a:active, a:visited, a:focus {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px 16px;
+  font-size: 16px;
 }
 
 .hide {
@@ -87,16 +120,66 @@ body.dark-mode .footer {
   padding: 10px;
 }
 
-.header {
-  width: 100%;
-  height: 60%;
-  position: fixed;
-  top: 0;
+.btn-img {
+  width: 50px;
+  height: 50px;
 }
-.header .title {
+
+.books-place {
+  margin: 20px;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+}
+.books-place .sample-book {
+  border-radius: 7%;
   display: flex;
-  position: absolute;
-  left: 45%;
-  margin-right: -60px;
-  top: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 16px;
+  line-height: 1.2;
+  margin: 16px;
+  box-shadow: 0 3px 10px var(--night);
+  text-align: center;
+  padding: 20px;
+}
+.books-place .sample-book .action-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.header .nav-btn-container {
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  border: none;
+}
+.header .nav-btn-container:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .title {
+    left: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */

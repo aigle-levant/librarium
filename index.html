@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Librarium by Aigle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js"></script>
     </head>
     <body class="light-mode">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
         <div class="container">
             <div class="pop-up add-book hide">
                 <form class="form add-book">
@@ -30,36 +24,39 @@
                     <button class="btn form-submit" type="submit">Submit</button>
                 </form>
             </div>
-            <header class="header">
-                <h1 class="text title">Librarium</h1>
-                <div class="nav-btn-container">
-                    <button class="btn sign-in">Sign in</button>
-                    <img src="" class="img btn-img">
-                </div>
-            </header>
             <main class="main">
-                <div class="books-place">
-                    <div class="sample-book animated">
+                <header class="header">
+                    <h1 class="text title">Librarium</h1>
+                    <div class="nav-btn-container">
+                        <button class="btn add-book">Add book</button>
+                        <button class="btn sign-in">Sign in</button>
+                        <!--icon by https://www.flaticon.com/authors/icon-hubs-->
+                        <button class="mode"><img src="dark-mode.png" class="img btn-img"></button>
+                    </div>
+                </header>
+                <div class="content">
+                    <div class="books-place">
+                    <div class="sample-book">
                         <div class="description">
-                            <h2 class="text heading">The Old Man and the Sea</h2>
-                            <h3 class="text sub-heading">Ernest Hemingway</h3>
+                            <h2 class="text heading book-title">The Old Man and the Sea</h2>
+                            <h3 class="text sub-heading author">Ernest Hemingway</h3>
                         </div>
-                        <div class="progress">
+                        <p class="text progress">
                             40 out of 72 pages read
-                        </div>
+                        </p>
                         <div class="action-btns">
                             <button class="btn read">Finished</button>
                             <button class="btn delete">Delete</button>
                         </div>
                     </div>
-                    <div class="sample-book animated">
+                    <div class="sample-book">
                         <div class="description">
                             <h2 class="text heading">Blood Meridian</h2>
                             <h3 class="text sub-heading">Cormac McCarthy</h3>
                         </div>
-                        <div class="progress">
+                        <p class="text progress">
                             44 out of 342 pages read
-                        </div>
+                        </p>
                         <div class="action-btns">
                             <button class="btn read">Finished</button>
                             <button class="btn delete">Delete</button>
@@ -71,6 +68,6 @@
                 <h3 class="text sub-heading">Made by Aigle | Check out my <a href="https://github.com/aigle-levant">Github</a></h3>
             </footer>
         </div>
-        <script src="script.js" async defer></script>
+        <script src="script.js"></script>
     </body>
 </html>
